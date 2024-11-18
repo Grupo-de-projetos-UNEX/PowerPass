@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PowerPass Quiz</title>
+  <link rel="stylesheet" href="css/quiz.css">
+</head>
+<body>
+  <section class="sec-quiz">
+    <div class="card-container">
+        <!-- CARD 1 -->
+        <div class="card" id="card-1" style="opacity: 100; display: flex;">
+            <img src="./img/img-card-1.svg" alt="">
+            <p>Senhas simples de até 8 caracteres levam em média <span class="orange-span">10min</span>
+                 para serem quebradas por um Hacker com um computador comum e <span class="orange-span">0s</span> por um Hacker com acesso a uma bot net.</p>
+        </div>
+        <!-- CARD 2 -->
+        <div class="card" id="card-2" card="question">
+            <form action="">
+                <p>Qual dessas senhas é <span class="light-blue"> mais apropriada</span> para proteger seus dados?</p>
+                <div class="options">
+                    <input type="radio" name="card-2" id="option-1" value="false">
+                    <label for="option-1">senha123</label>
+                    <input type="radio" name="card-2" id="option-2" value="false">
+                    <label for="option-2">pedrinho</label>
+                    <input type="radio" name="card-2" id="option-3" value="true">
+                    <label for="option-3">deusepainaoepadrasto</label>
+                </div>
+            </form>
+        </div>
+        <!-- CARD 3 -->
+        <div class="card" id="card-3">
+            <img src="./img/img-card-3.svg" alt="">
+            <p><span class="light-blue">Quanto mais caracteres</span> a sua senha tiver, maior será a <span class="light-blue">complexidade para quebrala.</span>   </p>
+        </div>
+        <!-- CARD 4 -->
+        <!-- <div class="card" id="card-4" card="question">
+            <form action="">
+                <p>Qual dessas senhas é <span class="light-blue"> mais apropriada</span> para proteger seus dados?</p>
+                <div class="options">
+                    <input type="radio" name="card-4" id="option-1" value="false">
+                    <label for="option-1">mariazinha</label>
+                    <input type="radio" name="card-4" id="option-2" value="true">
+                    <label for="option-2">MyGodIsBetter</label>
+                    <input type="radio" name="card-4" id="option-3" value="false">
+                    <label for="option-3">vraunei</label>
+                </div>
+            </form>
+        </div> -->
+    </div>
+    <button id="btn-next" class="btn" >Avançar</button>
+  </section>
+
+  <script>
+    var count = 1;
+    const options = document.querySelectorAll('.option');
+    const nextButton = document.querySelector('.next-button');
+    const size = document.querySelectorAll('.card').length;
+
+    console.log()
+
+    document.querySelector('#btn-next').addEventListener('click', btn => {
+        if(count == size){
+            window.location.href = "/"
+            return
+        }
+        
+        document.querySelector('#card-'+ count).style.opacity = 0;
+        setTimeout(()=>{
+            document.querySelector('#card-'+ count).style.display ='none';
+            count++;
+            
+            if(count%2 == 0){
+                btn.target.style.display = "none";
+                btn.target.style.opacity = "0";
+            }
+
+            document.querySelector('#card-'+ count).style.display ='flex';
+            setTimeout(()=>{
+                document.querySelector('#card-'+ count).style.opacity = 100;
+            },50)
+        },300)
+
+        
+
+    })
+
+    document.querySelectorAll('.card-container .card .options input[type="radio"]').forEach(input => {
+        input.addEventListener('change', function () {
+            document.querySelectorAll('.options input[type="radio"]').forEach(label => {
+                label.classList.remove('active-true', 'active-false', 'active-neutral');
+            });
+
+            // Adiciona a classe correspondente ao label do radio selecionado
+            const parentLabel = this;
+            if (this.value === 'true') {
+            parentLabel.classList.add('active-true');
+
+            document.querySelector('#btn-next').style.display = "block";
+            document.querySelector('#btn-next').style.opacity = "100%";
+
+            } else if (this.value === 'false') {
+            parentLabel.classList.add('active-false');
+            }
+        });
+    });
+
+  </script>
+</body>
+</html>

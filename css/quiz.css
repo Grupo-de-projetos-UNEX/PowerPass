@@ -1,0 +1,65 @@
+
+@import url(./style.css);
+
+.sec-quiz{
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    transition: all 300ms;
+}
+
+#btn-next{
+    transition: opacity 1000ms ease !important; 
+}
+
+.card{
+    display: none;
+    opacity: 0;
+    transition: opacity 300ms ease; 
+
+    color: #fff;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card p{
+    font-size: 1.5em;  font-weight: 700; letter-spacing: 1px; word-wrap: break-word;
+}
+
+.card .options{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.card .options > label{
+    background-color: var(--color-medium-gray);
+    font-weight: 700;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.card .options > label:hover{
+    transition: all 300ms;
+    background-color: #008baa;
+}
+
+.card .options > input{
+    display: none;
+}
+
+.card .options .active-true + label {
+    background-color: var(--color-light-blue, #1E90FF); /* Cor para valor true */
+  }
+  
+  .card .options .active-false + label {
+    background-color: var(--color-light-red, #FF6347); /* Cor para valor false */
+  }
