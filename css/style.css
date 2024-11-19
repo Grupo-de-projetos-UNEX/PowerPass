@@ -41,9 +41,8 @@ a{
 .btn{
    background-color: var(--color-light-blue);
    border: none;
-   width: 226px; 
-   height: 55px; 
-   border-radius: 60px;
+   padding: 10px 40px;
+   border-radius: 50px;
    text-align: center; 
    color: white;
    font-size: 1.5rem;
@@ -62,35 +61,43 @@ a{
 
 .principal{
     display: flex;
+    width: 100%;
+    max-width: 400px;
     flex-direction: column;
     justify-content: center; 
     align-items: center;    
-    height: 100vh;   
+    height: 100vh;
+    padding: 20px;   
 }
 
 .principal img{
-    width: 386px; height: 386px;
+    width: 100%;
+    max-width: 386px;
+    height: 386px;
 }
 
 .title{
-    color: white; font-size: 50.91px;  font-weight: 800; word-wrap: break-word
-}
-
-.light-blue{
-    color: #00ABD1; font-weight: 800; word-wrap: break-word
+    color: white; font-size: 3.8rem;  font-weight: 800;
+    margin-top: 50px;
 }
 
 .descricao{
-    width: 316px; 
-    height: 184.65px; 
     text-align: center;
     color: white; 
-    font-size: 27.60px;  
+    font-size: 1.7rem;  
     font-weight: 700; 
-    word-wrap: break-word
+    margin-bottom: 50px;
 }
 
-.orange-span{
-    color: #FF4400; font-size: 27.60px; font-weight: 700; word-wrap: break-word
+#img-home{
+    animation: float 3s ease-in-out infinite;
 }
 
+@keyframes float {
+    0%, 100% {
+      transform: translateY(0); /* Posição inicial e final */
+    }
+    50% {
+      transform: translateY(-20px); /* Move para cima */
+    }
+  }

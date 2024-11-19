@@ -20,92 +20,88 @@
             <form action="">
                 <p>Qual dessas senhas é <span class="light-blue"> mais apropriada</span> para proteger seus dados?</p>
                 <div class="options">
-                    <input type="radio" name="card-2" id="option-1" value="false">
-                    <label for="option-1">senha123</label>
-                    <input type="radio" name="card-2" id="option-2" value="false">
-                    <label for="option-2">pedrinho</label>
-                    <input type="radio" name="card-2" id="option-3" value="true">
-                    <label for="option-3">deusepainaoepadrasto</label>
+                    <input type="radio" name="card-2" id="card-2-option-1" value="false">
+                    <label for="card-2-option-1">senha123</label>
+                    <input type="radio" name="card-2" id="card-2-option-2" value="false">
+                    <label for="card-2-option-2">admin</label>
+                    <input type="radio" name="card-2" id="card-2-option-3" value="true">
+                    <label for="card-2-option-3">deusepainaoepadrasto</label>
                 </div>
             </form>
         </div>
         <!-- CARD 3 -->
         <div class="card" id="card-3">
             <img src="./img/img-card-3.svg" alt="">
-            <p><span class="light-blue">Quanto mais caracteres</span> a sua senha tiver, maior será a <span class="light-blue">complexidade para quebrala.</span>   </p>
+            <p><span class="light-blue">Isso mesmo!</span>Quanto mais caracteres a sua senha tiver, maior será a <span class="light-blue">complexidade para quebrala.</span>   </p>
         </div>
         <!-- CARD 4 -->
-        <!-- <div class="card" id="card-4" card="question">
+        <div class="card" id="card-4">
+            <img src="./img/img-card-4.svg" alt="">
+            <p>Para saber quantas tentativas um invasor precisa <span class="orange-span">para quebrar uma senha,</span> basta elevarmos o tamanho da senha pelas opções de caracteres disponíveis.</p>
+        </div>
+        <!-- CARD 5 -->
+        <div class="card" id="card-5">
+            <img src="./img/img-card-5.svg" alt="">
+            <p>Então uma senha de 8 caracteres de letras minúsculas tem: 
+                <br/><br/>
+                26^8 = <span class="orange-span">208.827.064.576</span>
+                <br/><br/>
+                Combinações possíveis</p>
+        </div>
+        <!-- CARD 6 -->
+        <div class="card" id="card-6">
+            <img src="./img/img-card-6.svg" alt="">
+            <p>Isso pode parecer muito, mas um computador comum pode fazer todas essas combinações <span class="orange-span">em apenas 10min.</span></p>
+        </div>
+        <!-- CARD 7 -->
+        <div class="card" id="card-7" card="question">
             <form action="">
                 <p>Qual dessas senhas é <span class="light-blue"> mais apropriada</span> para proteger seus dados?</p>
                 <div class="options">
-                    <input type="radio" name="card-4" id="option-1" value="false">
-                    <label for="option-1">mariazinha</label>
-                    <input type="radio" name="card-4" id="option-2" value="true">
-                    <label for="option-2">MyGodIsBetter</label>
-                    <input type="radio" name="card-4" id="option-3" value="false">
-                    <label for="option-3">vraunei</label>
+                    <input type="radio" name="card-7" id="card-7-option-1" value="false">
+                    <label for="card-7-option-1">admimadmim</label>
+                    <input type="radio" name="card-7" id="card-7-option-2" value="true">
+                    <label for="card-7-option-2">Fortalez@d3Aço</label>
+                    <input type="radio" name="card-7" id="card-7-option-3" value="false">
+                    <label for="card-7-option-3">senhaforte</label>
                 </div>
             </form>
-        </div> -->
+        </div>
+        <!-- CARD 8 -->
+        <div class="card" id="card-8">
+            <img src="./img/img-card-8.svg" alt="">
+            <p><span class="light-blue">Isso mesmo!</span> Adicionando letras maiúsculas, números e caracteres especiais na sua senha, <span class="light-blue">você aumenta exponencialmente a quantidade de combinações</span> necessárias para quebra-la.</p>
+        </div>
+        <!-- CARD 9 -->
+        <div class="card" id="card-9">
+            <img src="./img/blue-robot.svg"  style="margin: 0 auto; width: 280px;" alt="">
+            <p>Agora já sabemos como criar <span class="light-blue">senhas fortes!</span> </br></br> 
+                Mas, a medida que criamos várias senhas para <span class="orange-span">várias contas diferentes...</span></p>
+        </div>
+        <!-- CARD 10 -->
+        <div class="card" id="card-10">
+            <img src="./img/img-card-10.svg" alt="">
+            <p>Tendemos a nos <span class="orange-span">esquecer</span> das senhas que criamos e ficamos tentados a utilizar uma <span class="orange-span">senha padrão</span> para nossas contas.</p>
+        </div>
+        <!-- CARD 11 -->
+        <div class="card" id="card-11">
+            <img src="./img/img-card-11.png" alt="">
+            <p>Para solucionar esse problema, podemos utilizar gerenciadores de senha como <span class="light-blue">Microsoft Authenticator.</span> <br><br> 
+                Que além de gerenciar nossas senhas, permite adicionar <span class="light-blue">autenticação de dois fatores</span> no login de algumas contas
+            </p>
+        </div>
+        <!-- CARD 12 -->
+        <div class="card" id="card-12">
+            <img src="./img/card-senha.svg" alt="">
+            <p>já que você fez a escolha inteligente de utilizar um gerenciador de senhas. Precisa criar uma senha muito forte para que todas as suas senhas 
+                <span class="light-blue">estejam seguras dentro dele.</span></p>
+        </div>
+
     </div>
     <button id="btn-next" class="btn" >Avançar</button>
   </section>
 
-  <script>
-    var count = 1;
-    const options = document.querySelectorAll('.option');
-    const nextButton = document.querySelector('.next-button');
-    const size = document.querySelectorAll('.card').length;
-
-    console.log()
-
-    document.querySelector('#btn-next').addEventListener('click', btn => {
-        if(count == size){
-            window.location.href = "/"
-            return
-        }
-        
-        document.querySelector('#card-'+ count).style.opacity = 0;
-        setTimeout(()=>{
-            document.querySelector('#card-'+ count).style.display ='none';
-            count++;
-            
-            if(count%2 == 0){
-                btn.target.style.display = "none";
-                btn.target.style.opacity = "0";
-            }
-
-            document.querySelector('#card-'+ count).style.display ='flex';
-            setTimeout(()=>{
-                document.querySelector('#card-'+ count).style.opacity = 100;
-            },50)
-        },300)
-
-        
-
-    })
-
-    document.querySelectorAll('.card-container .card .options input[type="radio"]').forEach(input => {
-        input.addEventListener('change', function () {
-            document.querySelectorAll('.options input[type="radio"]').forEach(label => {
-                label.classList.remove('active-true', 'active-false', 'active-neutral');
-            });
-
-            // Adiciona a classe correspondente ao label do radio selecionado
-            const parentLabel = this;
-            if (this.value === 'true') {
-            parentLabel.classList.add('active-true');
-
-            document.querySelector('#btn-next').style.display = "block";
-            document.querySelector('#btn-next').style.opacity = "100%";
-
-            } else if (this.value === 'false') {
-            parentLabel.classList.add('active-false');
-            }
-        });
-    });
-
-  </script>
+  <script src="scripts/quiz.js"></script>
+  <script src="scripts/nav.js"></script>
 </body>
 </html>
