@@ -1,0 +1,116 @@
+@import url(./style.css);
+
+.sec-teste-senha{
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    transition: all 300ms;
+}
+
+
+
+.card-senha p{
+    color: white;
+    font-size: 1.5em;  
+    font-weight: 700; 
+    letter-spacing: 1px; 
+    word-wrap: break-word;
+    width: 316px;
+    height: 230px;
+}
+
+
+.card-senha h1{
+    text-align: center;
+    color: white;
+    font-size: 1.5em;  
+    font-weight: 700; 
+    letter-spacing: 1px; 
+    word-wrap: break-word;
+    width: 240px;
+    height: 100px;
+    
+}
+
+
+#sec-teste{
+    display: none;
+    opacity: 0;
+    transition: opacity 300ms ease; 
+
+   
+
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    gap: 20px;
+    height: 100vh;
+    color: #fff;
+    max-width: 400px;
+    margin: 0 auto;
+
+
+    
+}
+
+#sec-teste img {
+    width: auto; 
+    max-width: 100%; 
+    height: auto; 
+    margin-bottom: 20px; 
+}
+
+
+#sec-teste.active {
+    display: flex;
+    opacity: 1;
+}
+
+.barra-progresso {
+    width: 80%;
+    height: 15px;
+    background-color: #ddd;
+    margin-top: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+    
+    
+}
+
+#barra-progresso {
+    height: 100%;
+    width: 0%;
+    transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+input {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #00ABD1; 
+    border-radius: 5px; 
+    background-color: transparent; 
+    color: white; 
+    font-size: 16px;
+    outline: none; 
+    transition: border-color 0.3s ease; 
+}
+
+
+input:focus {
+    border-color: #0056b3; 
+}
+
+
+input::placeholder {
+    color: #aaa; 
+    font-style: italic;
+}
+
+.input p{
+    color: #5C6E7B; font-size: 15px;
+}
+
