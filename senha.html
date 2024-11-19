@@ -7,119 +7,26 @@
     <link rel="stylesheet" href="css/senha.css">
 </head>
 <body>
-
-    <section class="sec-teste-senha">
-        <img src="./img/card-senha.svg" alt="">
-
-        <div class="card-senha">
-            <p>
-                já que você fez a escolha inteligente de utilizar um gerenciador de senhas. Precisa criar uma senha muito forte para que todas as suas senhas  <span class="light-blue">estejam seguras dentro dele.</span>
-            </p>
-        </div>
-        <button id="btn-avancar" class="btn">Avançar</button>
-
-    </section>
-
-
     <section id="sec-teste">
         <img src="./img/rob-senha.svg" alt="">
-        <div class="card-senha">
-            <h1>Teste a segurança da sua senha</h1>
-        </div>
+        <h1>Teste a segurança da sua senha</h1>
+        
 
         <div class="input">
             <p>Sua senha</p>
             <div class="box-input">
-                <input type="password" id="senha-input" placeholder="*********">
+                <div class="password-container">
+                    <input type="password" id="senha-input" placeholder="*********">
+                    <span id="togglePassword" class="toggle-password"><img src="img/visibility.svg" alt=""></span>
+                </div>
                 <div class="barra-progresso">
                 <div id="barra-progresso"></div>
             </div>
         </div>
     </section>
 
-
-<script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const btnAvancar = document.getElementById("btn-avancar");
-        const secTeste = document.getElementById("sec-teste");
-        const secTesteSenha = document.querySelector(".sec-teste-senha");
-        const senhaInput = document.getElementById("senha-input");
-        const barraProgresso = document.getElementById("barra-progresso");
-
-   
-        btnAvancar?.addEventListener("click", () => {
-            secTesteSenha.style.display = "none";
-            secTeste.style.display = "flex";
-            secTeste.style.opacity = "1";
-        });
-
-        
-        senhaInput.addEventListener("input", () => {
-            const senha = senhaInput.value;
-            const forca = avaliarForcaSenha(senha);
-            atualizarBarraProgresso(forca);
-        });
-
-        // Lógica para avaliar força da senha
-        function avaliarForcaSenha(senha) {
-            const possuiNumero = /\d/.test(senha);
-            const possuiLetra = /[a-zA-Z]/.test(senha);
-            const possuiMaiuscula = /[A-Z]/.test(senha);
-            const possuiEspecial = /[!@#$%&*()\-_+.:;?\/]/.test(senha);
-
-            
-            if (senha.length < 4) {
-                return "Fraca";
-            }
-
-                
-            const criteriosAtendidos = [possuiNumero, possuiLetra, possuiMaiuscula, possuiEspecial].filter(Boolean).length;
-
-                
-            if (criteriosAtendidos === 4 && senha.length >= 8) {
-                return "Forte";
-            }
-
-                
-            if (criteriosAtendidos >= 3 && senha.length >= 5) {
-                return "Média";
-            }
-
-            return "Fraca"; 
-            }
-
-        
-        function atualizarBarraProgresso(forca) {
-
-            barraProgresso.style.display = "flex";
-            barraProgresso.style.alignItems = "center";
-            barraProgresso.style.justifyContent = "center";
-            barraProgresso.style.color = "white";
-            barraProgresso.style.fontWeight = "bold";
-            barraProgresso.style.fontSize = "10px"
-
-            switch (forca) {
-                case "Fraca":
-                    barraProgresso.style.width = "10%";
-                    barraProgresso.style.backgroundColor = "red";
-                    barraProgresso.innerHTML = "10%";
-                    break;
-                case "Média":
-                    barraProgresso.style.width = "50%";
-                    barraProgresso.style.backgroundColor = "orange";
-                    barraProgresso.innerHTML = "50%";
-                    break;
-                case "Forte":
-                    barraProgresso.style.width = "100%";
-                    barraProgresso.style.backgroundColor = "green";
-                    barraProgresso.innerHTML = "100%";
-                    break;
-            }
-        }
-    });
-
-    </script>
-
+<script src="scripts/senha.js"></script>
+<script src="scripts/nav.js"></script>
 
 </body>
 </html>

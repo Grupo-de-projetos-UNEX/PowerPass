@@ -1,70 +1,16 @@
 @import url(./style.css);
 
-.sec-teste-senha{
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 30px;
+
+#sec-teste{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 50px;
-    transition: all 300ms;
-}
-
-
-
-.card-senha p{
-    color: white;
-    font-size: 1.5em;  
-    font-weight: 700; 
-    letter-spacing: 1px; 
-    word-wrap: break-word;
-    width: 316px;
-    height: 230px;
-}
-
-
-.card-senha h1{
-    text-align: center;
-    color: white;
-    font-size: 1.5em;  
-    font-weight: 700; 
-    letter-spacing: 1px; 
-    word-wrap: break-word;
-    width: 240px;
-    height: 100px;
-}
-
-
-#sec-teste{
-    flex-direction: column;
     align-items: center; 
     justify-content: center; 
     gap: 20px;
-    /*height: 100vh;*/
+    padding: 30px;
     color: #fff;
     max-width: 400px;
     margin: 0 auto;
-}
-
-
-
-#sec-teste{
-    display: none;
-    opacity: 0;
-    transition: opacity 300ms ease; 
-
-    flex-direction: column;
-    align-items: center; 
-    justify-content: center; 
-    gap: 20px;
-    /*height: 100vh;*/
-    color: #fff;
-    max-width: 400px;
-    margin: 0 auto;
-
-
-    
 }
 
 #sec-teste img {
@@ -73,6 +19,11 @@
     border-radius: 17.70px;
 }
 
+#sec-teste h1{
+    text-align: center;
+    font-size: 2rem;
+    margin:40px auto;
+}
 
 #sec-teste.active {
     display: flex;
@@ -96,11 +47,33 @@
     transition: width 0.3s ease, background-color 0.3s ease;
 }
 
-input {
+.password-container {
+    position: relative;
     width: 100%;
+}
+
+.toggle-password {
+    position: absolute;
+    top: 55%;
+    right: 20px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 16px;
+    color: #666;
+    opacity: 30%;
+  }
+
+  .toggle-password img  :hover {
+    transition: all 400ms;
+    opacity: 70%;
+  }
+
+
+input {
+    width: 94%;
     padding: 10px;
     border: 1px solid #00ABD1; 
-    border-radius: 5px; 
+    border-radius: 8px; 
     background-color: transparent; 
     color: white; 
     font-size: 16px;
@@ -111,6 +84,7 @@ input {
 
 .input{
     margin-top: 50px;
+    width: 100%;
 }
 
 .box-input{
